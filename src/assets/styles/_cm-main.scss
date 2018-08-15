@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans+Condensed:300');
+
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(135deg, $color-1 0%, $color-3 100%);
+  width: 100vw;
+  min-height: 100vh;
+  //ANTIALIASING TRICKS
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+.cm-container {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  .cm-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    background: {
+      image: url('../img/building.jpg');
+      size: cover;
+      position: center top;
+      repeat: no-repeat;
+    }
+    @media #{$sm}{
+      height: 150px;
+      width: 150px;
+      border-radius: 150px;
+      margin-bottom: 20px;
+    }
+  }
+  h1.cm-h1{
+    font-size: 72px;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    color: $white;
+    letter-spacing: 20px;
+    @include clean-webkit;
+    position: relative;
+    @media #{$sm}{
+      font-size: 32px;
+    }
+    span {
+      font-size: 14px;
+      letter-spacing: initial;
+      font-weight: 500;
+      background-color: $color-5;
+      color: $white;
+      display: inline-block;
+      text-align: right;
+      @include clean-webkit;
+      padding: 5px!important;
+      border-radius: 0px 0px 3px 3px;
+      position: absolute;
+      right: 17px;
+      bottom: -20px;
+      @media #{$sm}{
+        font-size: 11px;
+      }
+    }
+  }
+  .cm-contact {
+    border-top: 1px solid rgba($white, 0.25);
+    padding: 20px 0px 0px 0px;
+    margin-top: 40px;
+    @media #{$sm}{
+      flex-direction: column;
+    }
+    a{
+      font-size: 13px;
+      @include clean-href;
+      color: $black;
+      border-right: 1px solid rgba($white, 0.25);
+      padding-left: 10px;
+      padding-right: 10px;
+      i {
+        margin-right: 5px;
+      }
+      @media #{$sm}{
+        border-right: 0px;
+        font-size: 10px;
+      }
+      &:hover, &:visited, &:focus, &:active {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: $black;
+        border-right: 1px solid rgba($white, 0.25);
+        @media #{$sm}{
+          border-right: 0px;
+          font-size: 10px;
+        }
+      }
+      &:last-of-type{
+        border-right: 0px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
