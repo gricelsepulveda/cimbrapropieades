@@ -6,7 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  background: linear-gradient(135deg, $color-1 0%, $color-3 100%);
+  background: white;
   width: 100vw;
   min-height: 100vh;
   //ANTIALIASING TRICKS
@@ -21,24 +21,42 @@ body {
   text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
+.cm-bg-body {
+  background: {
+    image: url('../img/building.jpg');
+    size: cover;
+    position: center top;
+    repeat: no-repeat;
+    color: white;
+    blend-mode: hard-light;
+  }
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(5px);
+}
+
 .cm-container {
   width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
   .cm-img {
-    height: 200px;
-    width: 200px;
-    border-radius: 200px;
-    background: {
-      image: url('../img/building.jpg');
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    background: {   
+      image: url('../img/cimbra-logo-black.svg');
       size: cover;
-      position: center top;
+      position: 30% center;
       repeat: no-repeat;
     }
     @media #{$sm}{
-      height: 150px;
-      width: 150px;
+      height: 250px;
+      width: 250px;
       border-radius: 150px;
       margin-bottom: 20px;
     }
@@ -76,16 +94,19 @@ body {
     }
   }
   .cm-contact {
-    border-top: 1px solid rgba($white, 0.25);
-    padding: 20px 0px 0px 0px;
+    padding: 15px 0px 20px 0px;
     margin-top: 40px;
+    align-items: flex-end!important;
+    background-color: $black;
+    width: 100%;
     @media #{$sm}{
       flex-direction: column;
+      align-items: center!important;
     }
     a{
       font-size: 13px;
       @include clean-href;
-      color: $black;
+      color: $white;
       border-right: 1px solid rgba($white, 0.25);
       padding-left: 10px;
       padding-right: 10px;
@@ -99,7 +120,7 @@ body {
       &:hover, &:visited, &:focus, &:active {
         padding-left: 10px;
         padding-right: 10px;
-        color: $black;
+        color: $white;
         border-right: 1px solid rgba($white, 0.25);
         @media #{$sm}{
           border-right: 0px;
