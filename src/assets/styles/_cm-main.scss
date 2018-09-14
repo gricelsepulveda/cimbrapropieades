@@ -134,3 +134,17 @@ body {
     }
   }
 }
+
+
+//TEST STYLES
+
+body.img-test {
+  height: initial;
+  width: initial;
+}
+.cm-img-test{
+  width: 1366px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
