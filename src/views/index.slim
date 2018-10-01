@@ -14,21 +14,56 @@ html lang="es"
     link rel="stylesheet" href="assets/styles/cm-styles.min.css" type="text/css"
     /! JQUERY
     script src="js/jquery-3.3.1.min.js" type="text/javascript"
+    /! SCRIPTS
+    script src="js/cm-scripts.min.js"
     /! LIVERELOAD
     script src="http://localhost:35729/livereload.js"
     /! FONTAWESOME
     link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
+
   body
-  .cm-bg-body
-  .cm-container.flex.col.center
-    .cm-img
-      
-    .cm-contact.flex.row.center
-      a href="tel:+56989029333‬"
-        i.fas.fa-phone
-        span
-          |(+569) 
-        | 89029333‬
-      a href="mailto:jimena.fuentealba@cimbrapropieades.cl"
-        i.fas.fa-envelope
-        | jimena.fuentealba@cimbrapropieades.cl
+    /! MAIN NAVBAR
+    nav.cm-main-nav
+      img src="../assets/img/logo-cimbra.svg" alt="cimbra logo"
+      .cm-nav-wrapper.flex.col.end
+        ul.cm-social-nav.flex.row.end 
+          li.cm-social-item.flex.row.end
+            a href="tel:+56989029333"
+              i.fas.fa-phone
+              | +56 9 89029333
+          li.cm-social-item
+            a href="#"
+              i.fab.fa-facebook-f
+          li.cm-social-item
+            a href="#"
+              i.fab.fa-twitter
+          li.cm-social-item
+            a href="#"
+              i.fab.fa-instagram
+        ul.cm-link-nav.flex.row.end
+          li.cm-link-item.active
+            a href="#"
+              | Inicio
+          li.cm-link-item 
+            a href="#"
+              | Servicios
+          li.cm-link-item 
+            a href="#"
+              | Requisitos
+          li.cm-link-item 
+            a href="#"
+              | Catálogo
+          li.cm-link-item 
+            a href="#"
+              | Contacto
+    
+    /! SLIDER 
+    .cm-slider-wrapper
+      ul.cm-list-slider
+        li.cm-item-slider.active
+        li.cm-item-slider
+        li.cm-item-slider
+        ol.cm-slider-buttons.flex.row.center
+          li.cm-slider-button.active
+          li.cm-slider-button
+          li.cm-slider-button

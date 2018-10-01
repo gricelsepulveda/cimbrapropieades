@@ -94,6 +94,12 @@
   list-indent: 0;
   list-style-type: none;
   list-style-position: outside;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 
 @mixin clean-href {
