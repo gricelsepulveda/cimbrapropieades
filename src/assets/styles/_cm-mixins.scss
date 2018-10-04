@@ -217,3 +217,12 @@ form {
   animation: 1s infinite noise;
   pointer-events: none;
 }
+
+
+@mixin font($defaultFamily, $size, $weight){
+  font: {
+    family: $defaultFamily;
+    size: $size;
+    weight: $weight;
+  }
+}

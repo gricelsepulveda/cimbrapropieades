@@ -18,6 +18,9 @@ $sm-abs: "(min-width: 340px) and (max-width: 767px)";
 $md-abs: "(min-width: 768px) and (max-width: 991px)";
 $lg-abs: "(min-width: 992px) and (max-width: 1199px)";
 
+//FONTS
+$defaultFamily: 'Work Sans', sans-serif;
+
 @mixin animate {
   transition: all 0.25s ease-in-out;
 }
