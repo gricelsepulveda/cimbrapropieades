@@ -128,37 +128,147 @@ html lang="es"
     /! SERVICES
     section.cm-services
       h2.flex.center.row.cm-section-title Cimbra te ofrece
-      .flex.center.row
+      .flex.center.row.cm-service-flex
         /! SERVICE 1
         article.flex.col.center.cm-serv-article
-          img src="../assets/img/service-1.jpg" alt="service-1" title="service-1"
+          .cm-img-container
+            img src="../assets/img/corretaje.jpg" alt="service-1" title="service-1"
           h3.text-center Corretaje
           p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-          a href="#"
+          a.button.naked href="#"
             img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
             | Seguir leyendo
         /! SERVICE 2
         article.flex.col.center.cm-serv-article
-          img src="../assets/img/service-2.jpg" alt="service-2" title="service-2"
+          .cm-img-container
+            img src="../assets/img/arrendamiento.jpeg" alt="service-2" title="service-2"
           h3.text-center Venta/Arriendo de propieades
-          p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-          a href="#"
+          p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+          a.button.naked href="#"
             img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
             | Seguir leyendo
         /! SERVICE 3
         article.flex.col.center.cm-serv-article
-          img src="../assets/img/service-2.jpg" alt="service-2" title="service-2"
+          .cm-img-container
+            img src="../assets/img/tasacion.jpg" alt="service-2" title="service-2"
           h3.text-center Tasasión
           p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-          a href="#"
+          a.button.naked href="#"
             img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
             | Seguir leyendo
     
     /! SHOWCASE PROPIERTIES
     section.cm-showcase
-      .flex.row.start
+      .flex.row.between
         h2.flex.start.row.cm-section-title Propiedades destacadas
-        a.button.normal href="#" Publica con nosotros
-        a.button.highlight href="#" Ver catálogo completo
+        .flex.row.end
+          a.button.normal href="#" Publica con nosotros
+          a.button.highlight href="#" Ver catálogo completo
+      .flex.row.center.cm-showcase-flex
+        /! PROPIERTY 1
+        article.cm-highlight-property
+          span Copiapó, Región de Atacama
+          .flex.col.start.cm-block-h-property
+            h4 Venta propiedad usada
+            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+            a.button.naked href="#"
+              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
+              | Seguir leyendo
+        /! PROPIERTY 2
+        article.cm-highlight-property
+          span Copiapó, Región de Atacama
+          .flex.col.start.cm-block-h-property
+            h4 Venta propiedad usada
+            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+            a.button.naked href="#"
+              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
+              | Seguir leyendo
+        /! PROPIERTY 3
+        article.cm-highlight-property
+          span Copiapó, Región de Atacama
+          .flex.col.start.cm-block-h-property
+            h4 Venta propiedad usada
+            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+            a.button.naked href="#"
+              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
+              | Seguir leyendo
+        /! PROPIERTY 4
+        article.cm-highlight-property
+          span Copiapó, Región de Atacama
+          .flex.col.start.cm-block-h-property
+            h4 Venta propiedad usada
+            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+            a.button.naked href="#"
+              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
+              | Seguir leyendo
+        /! PROPIERTY 5
+        article.cm-highlight-property
+          span Copiapó, Región de Atacama
+          .flex.col.start.cm-block-h-property
+            h4 Venta propiedad usada
+            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+            a.button.naked href="#"
+              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
+              | Seguir leyendo
+        /! PROPIERTY 6
+        article.cm-highlight-property
+          span Copiapó, Región de Atacama
+          .flex.col.start.cm-block-h-property
+            h4 Venta propiedad usada
+            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+            a.button.naked href="#"
+              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
+              | Seguir leyendo
+    
+    /! CONTACT
+    section.cm-contact
+      .flex.row.between.cm-flex-contact
+        h2.flex.row.start Escríbenos y conversemos acerca de tu espacio.
+        form.flex.col.end.cm-contact-form
+          h4 Formulario de Contacto
+          .flex.row.end.cm-flex-form
+            label Nombre:*
+            input type="text" name="name"
+          .flex.row.end.cm-flex-form
+            label Teléfono:*
+            input type="text" name="phone"
+          .flex.row.end.cm-flex-form
+            label Correo:*
+            input type="email" name="mail"
+          .flex.row.end.cm-flex-form
+            label Asunto:
+            input type="text" name="subject"
+          .flex.row.end.cm-flex-form
+            label Mensaje:
+            textarea name="message" rows="7"
+          a.button.normal href="#" Enviar
+          span.cm-note Te contactaremos de vuelta en un plazo max. de 24hrs (hábiles)
+    
+    /! FOOTER
+    footer.cm-footer.flex.row.between
+      .flex.col.start
+        p Síguenos en nuestras redes sociales
+        .flex.row.start 
+          a.cm-link href="#"
+            i.fab.fa-facebook-f
+          a.cm-link href="#"
+            i.fab.fa-twitter
+          a.cm-link href="#"
+            i.fab.fa-instagram
+        p.direct O contáctanos directamente
+        .flex.row.start
+          .flex.row.start
+            a href="tel:+56989029333"
+              i.fas.fa-phone
+              | +56 9 89029333
+          .flex.row.start
+            a href="mailto:contacto@cimbrapropiedades.cl"
+              i.fas.fa-envelope
+              | contacto@cimbrapropieades.cl
+      img src="../assets/img/logo-cimbra.svg" alt="cimbra logo"
+
+
+
+
 
 

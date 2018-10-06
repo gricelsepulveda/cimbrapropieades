@@ -48,8 +48,11 @@ a.button{
   text-transform: uppercase;
   padding-left: 20px;
   padding-right: 20px;
-  height: 32px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  min-height: 32px;
   text-decoration: none;
+  text-align: center;
   border-radius: 4px;
   &.highlight {
     background-color: $color-1;
@@ -139,7 +142,6 @@ nav.cm-main-nav{
     width: 100%;
     @include clean-list;
     position: relative;
-    background: pink;
     li.cm-item-slider {
       top: 0px;
       left: 0px;
@@ -150,18 +152,23 @@ nav.cm-main-nav{
       opacity: 0;
       @include flex-col-center;
       @include animate;
+      background: {
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+      }
       &.active {
         z-index: 0;
         opacity: 1;
       }
       &:nth-of-type(1){
-        background-color: goldenrod;
+        background-image: url('../img/homebanner.jpg');
       }
       &:nth-of-type(2){
-        background-color: violet;
+        background-image: url('../img/homebanner.jpg');
       }
       &:nth-of-type(3){
-        background-color: yellowgreen;
+        background-image: url('../img/homebanner.jpg');
       }
       .cm-slider-content {
         width: 100%;
@@ -234,6 +241,7 @@ nav.cm-main-nav{
   padding-bottom: 10px;
   padding-left: 40px;
   padding-right: 40px;
+  box-sizing: border-box;
   color: $white;
   @include font($defaultFamily, 14px, 400);
 }
@@ -247,22 +255,30 @@ section.cm-services{
   .cm-section-title {
     margin-bottom: 80px;
   }
+  .cm-service-flex {
+    align-items: flex-start!important;
+  }
   .cm-serv-article{
     margin-right: 40px;
     &:last-of-type{
       margin-right: 0px;
     }
-    > img {
-      width: 200px;
+    .cm-img-container {
       height: 200px;
-      border: 1px solid $white;
-      margin-bottom: 20px;
+      width: 200px;
+      overflow: hidden;
+      > img {
+        @include flex-col-center;
+        width: auto;
+        height: 100%;
+        border: 1px solid $white;
+      }
     }
-    margin-bottom: 20px;
     h3 {
       color: $black;
       @include font($defaultFamily, 18px, 600);
       margin-bottom: 10px;
+      margin-top: 20px;
       max-width: 350px;
     }
     p {
@@ -271,16 +287,222 @@ section.cm-services{
       margin-bottom: 10px;
       max-width: 350px;
     }
-    a {
-      @include flex-row-center;
-      color: $color-1;
-      @include font($defaultFamily, 12px, 500);
-      img {
-        border-radius: 4px;
-        height: 14px;
-        width: 14px;
-        background-color: $color-1;
+    a.button.naked {
+      align-self: center;
+    }
+  }
+}
+
+//SHOWCASE
+
+.cm-showcase{
+  box-sizing: border-box;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  a.button{
+    margin-right: 10px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  .cm-showcase-flex {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    max-width: 1120px;
+    //HIGHLIGHTED PROPIERTY 
+    .cm-highlight-property {
+      width: 350px;
+      height: 350px;
+      margin: 10px;
+      border: 1px solid rgba($black, 0.25);
+      position: relative;
+      background: {
+        image: url('../img/propierty.jpg');
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+      }
+      span {
+        @include flex-row-center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $black;
+        color: $white;
+        @include font($defaultFamily, 13px, 400);
+        box-sizing: border-box;
+        max-width: 90%;
+        @include text-overflow;
+        padding: 5px 10px 5px 10px;
+      }
+      .cm-block-h-property {
+        background-color: $white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 10px;
+        h4 {
+          @include font($defaultFamily, 12px, 500);
+          margin-bottom: 5px;
+          color: $black;
+        }
+        p {
+          @include font($defaultFamily, 12px, 400);
+          color: $black;
+        }
+        a.button.naked {
+          margin-top: 10px;
+        }
       }
     }
   }
+}
+
+a.button.naked {
+  @include flex-row-center;
+  align-self: flex-end;
+  color: $color-1;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include font($defaultFamily, 12px, 500);
+  img {
+    border-radius: 4px;
+    height: 14px;
+    width: 14px;
+    margin-top: -2px;
+    background-color: $color-1;
+  }
+}
+
+.cm-contact {
+  box-sizing: border-box;
+  padding-right: 80px;
+  padding-left: 40px;
+  background: {
+    image: url('../img/contact-bg.jpg');
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  min-height: 630px;
+  .cm-flex-contact {
+    align-items: flex-start!important;
+  }
+  h2 {
+    color: $white;
+    @include font($defaultFamily, 48px, 600);
+    max-width: 50%;
+    margin-top: 40px;
+  }
+  form.cm-contact-form {
+    background-color: rgba($white, 0.35);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 350px;
+    height: 630px;
+    position: relative;
+    h4 {
+      color: $white;
+      @include font($defaultFamily, 16px, 600);
+      margin-top: 80px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: left;
+    }
+    .cm-flex-form {
+      width: 100%;
+      margin-bottom: 10px;
+      &:last-of-type{
+        margin-bottom: 0px;
+      }
+      label {
+        color: $white;
+        @include font($defaultFamily, 12px, 400);
+        text-align: right;
+        margin-right: 20px;
+      }
+      input, textarea {
+        width: 230px;
+        border: 1px solid $white;
+        background-color: transparent;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: $white;
+        @include font($defaultFamily, 12px, 400);
+        &:focus {
+          background-color: $white;
+          color: $black;
+        }
+      }
+      input {
+        height: 28px;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include flex-row-center;
+      }
+      textarea {
+        padding: 10px;
+      }
+    }    
+    a.button.normal{
+      margin-top: 10px;
+    }
+    span.cm-note {
+      box-sizing: border-box;
+      width: 100%;
+      background-color: $white;
+      padding: 5px;
+      color: $black;
+      @include font($defaultFamily, 11px, 400);
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.cm-footer {
+  background-color: $black;
+  padding: 40px;
+  box-sizing: border-box;
+  img {
+    width: 250px;
+  }
+  p, a {
+    color: $white;
+    @include font($defaultFamily, 14px, 400);
+  }
+  i {
+    color: $white;
+    &.fa-envelope, &.fa-phone {
+      margin-right: 5px;
+    }
+  }
+  a {
+    @include clean-href;
+    color: $white!important;
+    margin-right: 20px!important;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+  .cm-link {
+    width: 32px;
+    height: 32px;
+    @include flex-col-center;
+  } 
+}
+
+.direct{
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
