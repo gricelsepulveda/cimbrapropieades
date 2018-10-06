@@ -222,6 +222,7 @@ nav.cm-main-nav{
         border-radius: 100%;
         background-color: $white;
         margin-right: 10px;
+        cursor: pointer;
         &:last-of-type{
           margin-right: 0px;
         }
@@ -357,6 +358,27 @@ section.cm-services{
         }
         a.button.naked {
           margin-top: 10px;
+        }
+      }
+    }
+  }
+  &.page {
+    padding-top: 130px;
+    .cm-nav-pages{
+      margin-top: 40px;
+      a.button.naked{
+        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        text-transform: initial;
+        &.active{
+          border-radius: 2px;
+          background-color: $color-1;
+          color: $white;
+          @include animate;
+          &:hover{
+            background-color: lighten($color-1, 10%);
+          }
         }
       }
     }
@@ -505,4 +527,112 @@ a.button.naked {
 .direct{
   margin-bottom: 10px;
   margin-top: 20px;
+}
+
+//PROPIERTY PAGE
+
+.cm-noslider-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 80px;
+  height: 630px;
+  position: relative;
+  &.propierty{
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+      image: url('../img/propierty-banner.jpg');
+    }
+    .cm-flex-propierty-noslider{
+      background-color: rgba($black, 0.5);
+      padding: 20px;
+      position: absolute;
+      bottom: 120px;
+      left: 0px;
+      h2 {
+        color: $white;
+        @include font($defaultFamily, 48px, 300);
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      p {
+        color: $white;
+        @include font($defaultFamily, 16px, 400);
+        span {
+          display: block;
+          margin-bottom: 10px;
+          @include font($defaultFamily, 16px, 500);
+        }
+      }
+    }
+  }
+}
+
+.cm-propierty-page{
+  padding: 40px;
+  box-sizing: border-box;
+  > a.button.naked {
+    text-transform: initial;
+    align-self: start;
+    i {
+      margin-right: 5px;
+    }
+  }
+  h2 {
+    color: $black;
+    @include font($defaultFamily, 48px, 600);
+    margin-bottom: 40px;
+  }
+  .cm-container-propierty-images {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background: {
+      image: url('../img/propierty.jpg');
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    .cm-propierty-carrousel{
+      background-color: rgba($white, 0.5);
+      position: absolute;
+      padding: 10px;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      box-sizing: border-box;
+      ul {
+        @include clean-list;
+        width: 100%;
+        li {
+          @include clean-list;
+          height: 40px;
+          width: 40px;
+          background: {
+            image: url('../img/propierty.jpg');
+            size: cover;
+            position: center;
+            repeat: no-repeat;
+          }
+          opacity: 0.75;
+          border: 2px solid transparent;
+          margin-right: 10px;
+          cursor: pointer;
+          @include animate;
+          &:last-of-type {
+            margin-right: 0px;
+          }
+          &:hover {
+            opacity: 1;
+            border: 2px solid $color-1;
+          }
+          &.active {
+            opacity: 1;
+            border: 2px solid $white;
+          }
+        }
+      }
+    }
+  }
 }

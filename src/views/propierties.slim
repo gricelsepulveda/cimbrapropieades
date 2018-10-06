@@ -41,7 +41,7 @@ html lang="es"
             a href="#"
               i.fab.fa-instagram
         ul.cm-link-nav.flex.row.end
-          li.cm-link-item.active
+          li.cm-link-item
             a href="#"
               | Inicio
           li.cm-link-item 
@@ -50,120 +50,17 @@ html lang="es"
           li.cm-link-item 
             a href="#" 
               | Requisitos
-          li.cm-link-item 
-            a href="./propierties.html"
+          li.cm-link-item.active
+            a href="#"
               | Catálogo
           li.cm-link-item 
             a href="#"
               | Contacto
-    
-    /! SLIDER 
-    .cm-slider-wrapper
-      ul.cm-list-slider
-        /! SLIDER 1
-        li.cm-item-slider.active
-          .flex.col.start.cm-slider-content
-            h2 Encuentra un lugar, invierte, despega
-            .flex.row.start
-              article.cm-banner-art
-                .cm-banner-art-icon
-                  img src="../assets/img/icon-documento.svg" alt="icon-1" title="icon-1"
-                p
-                  | Te apoyamos en tus trámites inmobiliarios
-                  br
-                  | Tasasiones | Asesorías legales | Biences raíces
-              article.cm-banner-art
-                .cm-banner-art-icon
-                  img src="../assets/img/icon-home.svg" alt="icon-1" title="icon-1"
-                p
-                  | Te entregamos las llaves de tu próxima propiedad
-                  br
-                  | Compra | Venta | Arriendos
-        /! SLIDER 2
-        li.cm-item-slider
-          .flex.col.start.cm-slider-content
-            h2 Este es el segundo banner
-            .flex.row.start
-              article.cm-banner-art
-                .cm-banner-art-icon
-                  img src="../assets/img/icon-documento.svg" alt="icon-1" title="icon-1"
-                p
-                  | Te apoyamos en tus trámites inmobiliarios
-                  br
-                  | Tasasiones | Asesorías legales | Biences raíces
-              article.cm-banner-art
-                .cm-banner-art-icon
-                  img src="../assets/img/icon-home.svg" alt="icon-1" title="icon-1"
-                p
-                  | Te entregamos las llaves de tu próxima propiedad
-                  br
-                  | Compra | Venta | Arriendos
-        /! SLIDER 3
-        li.cm-item-slider
-          .flex.col.start.cm-slider-content
-            h2 Este es el tercer banner
-            .flex.row.start
-              article.cm-banner-art
-                .cm-banner-art-icon
-                  img src="../assets/img/icon-documento.svg" alt="icon-1" title="icon-1"
-                p
-                  | Te apoyamos en tus trámites inmobiliarios
-                  br
-                  | Tasasiones | Asesorías legales | Biences raíces
-              article.cm-banner-art
-                .cm-banner-art-icon
-                  img src="../assets/img/icon-home.svg" alt="icon-1" title="icon-1"
-                p
-                  | Te entregamos las llaves de tu próxima propiedad
-                  br
-                  | Compra | Venta | Arriendos
-        ol.cm-slider-buttons.flex.row.center
-          li.cm-slider-button.active
-          li.cm-slider-button
-          li.cm-slider-button
-    
-    /! UF BAND
-    .cm-uf-band.flex.row.center Lunes 27 de Agosto de 2018, Valor UF: $29.238,94 CLP | $44.25 USD
 
-    /! SERVICES
-    section.cm-services
-      h2.flex.center.row.cm-section-title Cimbra te ofrece
-      .flex.center.row.cm-service-flex
-        /! SERVICE 1
-        article.flex.col.center.cm-serv-article
-          .cm-img-container
-            img src="../assets/img/corretaje.jpg" alt="service-1" title="service-1"
-          h3.text-center Corretaje
-          p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-          a.button.naked href="#"
-            img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-            | Seguir leyendo
-        /! SERVICE 2
-        article.flex.col.center.cm-serv-article
-          .cm-img-container
-            img src="../assets/img/arrendamiento.jpeg" alt="service-2" title="service-2"
-          h3.text-center Venta/Arriendo de propieades
-          p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-          a.button.naked href="#"
-            img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-            | Seguir leyendo
-        /! SERVICE 3
-        article.flex.col.center.cm-serv-article
-          .cm-img-container
-            img src="../assets/img/tasacion.jpg" alt="service-2" title="service-2"
-          h3.text-center Tasasión
-          p.text-center Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-          a.button.naked href="#"
-            img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-            | Seguir leyendo
-    
     /! SHOWCASE PROPIERTIES
-    section.cm-showcase
-      .flex.row.between
-        h2.flex.start.row.cm-section-title Propiedades destacadas
-        .flex.row.end
-          a.button.normal href="#" Publica con nosotros
-          a.button.highlight href="#" Ver catálogo completo
+    section.cm-showcase.page
+      .flex.row.center
+        h2.flex.start.row.cm-section-title Nuestras propiedades
       .flex.row.center.cm-showcase-flex
         /! PROPIERTY 1
         article.cm-highlight-property
@@ -219,6 +116,12 @@ html lang="es"
             a.button.naked href="#"
               img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
               | Seguir leyendo
+      nav.cm-nav-pages.flex.row.end
+        a.button.naked href="#" Atrás
+        a.button.naked.active href="#" 1
+        a.button.naked href="#" 2
+        a.button.naked href="#" 3
+        a.button.naked href="#" Siguiente
     
     /! CONTACT
     section.cm-contact
@@ -229,7 +132,7 @@ html lang="es"
           .flex.row.end.cm-flex-form
             label Nombre:*
             input type="text" name="name"
-          .flex.row.end.cm-flex-form
+          .flex.row.end.cm-flex-form 
             label Teléfono:*
             input type="text" name="phone"
           .flex.row.end.cm-flex-form

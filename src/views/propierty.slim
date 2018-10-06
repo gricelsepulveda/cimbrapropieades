@@ -1,0 +1,160 @@
+doctype html
+html lang="es"
+  head
+    meta charset="utf-8"
+    title Cimbra Propieades
+    meta name="description" content="Cimbra Propieades"
+    meta name="keywords" content="propiedades, corretaje, departamento, casa, inmobiliario, tazaciones, compra, venta"/
+    meta name="author" content="Gricel Sepúlveda y Jimena Fuentealba"
+    /! VIEWPORT RESPONSIVE
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
+    /! NORMALIZE
+    link rel="stylesheet" href="assets/styles/normalize.min.css" type="text/css" 
+    /! STYLES 
+    link rel="stylesheet" href="assets/styles/cm-styles.min.css" type="text/css"
+    /! JQUERY
+    script src="js/jquery-3.3.1.min.js" type="text/javascript"
+    /! SCRIPTS
+    // script src="js/cm-scripts.min.js"
+    /! LIVERELOAD
+    script src="http://localhost:35729/livereload.js"
+    /! FONTAWESOME
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
+
+  body
+    /! MAIN NAVBAR
+    nav.cm-main-nav
+      img src="../assets/img/logo-cimbra.svg" alt="cimbra logo"
+      .cm-nav-wrapper.flex.col.end
+        ul.cm-social-nav.flex.row.end 
+          li.cm-social-item.flex.row.end
+            a href="tel:+56989029333"
+              i.fas.fa-phone
+              | +56 9 89029333
+          li.cm-social-item
+            a href="#"
+              i.fab.fa-facebook-f
+          li.cm-social-item
+            a href="#"
+              i.fab.fa-twitter
+          li.cm-social-item
+            a href="#"
+              i.fab.fa-instagram
+        ul.cm-link-nav.flex.row.end
+          li.cm-link-item
+            a href="#"
+              | Inicio
+          li.cm-link-item 
+            a href="#"
+              | Servicios
+          li.cm-link-item 
+            a href="#" 
+              | Requisitos
+          li.cm-link-item.active
+            a href="./propierties.html"
+              | Catálogo
+          li.cm-link-item 
+            a href="#"
+              | Contacto
+    
+    /! SLIDER 
+    .cm-noslider-wrapper.propierty
+      .flex.col.start.cm-flex-propierty-noslider
+        h2
+          | 4200UF - 800m2
+          br
+          |Propiedad usada
+        p
+          span Copiapó -  Región de Atacama
+          | 3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
+    
+    /! UF BAND
+    .cm-uf-band.flex.row.center Lunes 27 de Agosto de 2018, Valor UF: $29.238,94 CLP | $44.25 USD
+
+    /! PROPIERTY PAGE
+    section.cm-propierty-page.flex.col.start
+      a.button.naked href="#"
+        i.fas.fa-arrow-left
+        | Volver
+      h2.flex.start.row.cm-section-title Nombre de la propiedad
+      .flex.row.center
+        .cm-container-propierty-images
+          nav.cm-propierty-carrousel
+            ul.flex.row.start
+              li.active
+              li
+              li 
+        .flex.col.start
+          span.cm-price-uf 4.200UF
+          span.cm-price $000.000.000
+          .flex.row.start
+            a.button.normal href="#" Consultar por propiedad
+            .flex.row.start.cm-social
+              p Compartir
+              a.button.facebook href="#"
+                i.fab.fa-facebook-f
+              a.button.facebook href="#"
+                i.fab.fa-twitter
+              a.button.instagram href="#"
+                i.fab.fa-instagram
+          h5 Descripción
+          p 
+            | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          .flex.row.start.cm-propierty-badges
+            .cm-propierty-badge
+              img src="../assets/img/icon-balcon.svg"
+
+      
+    
+    /! CONTACT
+    section.cm-contact
+      .flex.row.between.cm-flex-contact
+        h2.flex.row.start Escríbenos y conversemos acerca de tu espacio.
+        form.flex.col.end.cm-contact-form
+          h4 Formulario de Contacto
+          .flex.row.end.cm-flex-form
+            label Nombre:*
+            input type="text" name="name"
+          .flex.row.end.cm-flex-form
+            label Teléfono:*
+            input type="text" name="phone"
+          .flex.row.end.cm-flex-form
+            label Correo:*
+            input type="email" name="mail"
+          .flex.row.end.cm-flex-form
+            label Asunto:
+            input type="text" name="subject"
+          .flex.row.end.cm-flex-form
+            label Mensaje:
+            textarea name="message" rows="7"
+          a.button.normal href="#" Enviar
+          span.cm-note Te contactaremos de vuelta en un plazo max. de 24hrs (hábiles)
+    
+    /! FOOTER
+    footer.cm-footer.flex.row.between
+      .flex.col.start
+        p Síguenos en nuestras redes sociales
+        .flex.row.start 
+          a.cm-link href="#"
+            i.fab.fa-facebook-f
+          a.cm-link href="#"
+            i.fab.fa-twitter
+          a.cm-link href="#"
+            i.fab.fa-instagram
+        p.direct O contáctanos directamente
+        .flex.row.start
+          .flex.row.start
+            a href="tel:+56989029333"
+              i.fas.fa-phone
+              | +56 9 89029333
+          .flex.row.start
+            a href="mailto:contacto@cimbrapropiedades.cl"
+              i.fas.fa-envelope
+              | contacto@cimbrapropieades.cl
+      img src="../assets/img/logo-cimbra.svg" alt="cimbra logo"
+
+
+
+
+
+
