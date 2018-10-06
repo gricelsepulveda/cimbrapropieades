@@ -15,7 +15,7 @@ html lang="es"
     /! JQUERY
     script src="js/jquery-3.3.1.min.js" type="text/javascript"
     /! SCRIPTS
-    script src="js/cm-scripts.min.js"
+    // script src="js/cm-scripts.min.js"
     /! LIVERELOAD
     script src="http://localhost:35729/livereload.js"
     /! FONTAWESOME
@@ -44,84 +44,50 @@ html lang="es"
           li.cm-link-item
             a href="./index.html"
               | Inicio
-          li.cm-link-item 
+          li.cm-link-item.active
             a href="./services.html"
               | Servicios
           li.cm-link-item 
-            a href="./requiered.html"
+            a href="./required.html"
               | Requisitos
-          li.cm-link-item.active
+          li.cm-link-item
             a href="./propierties.html"
               | Catálogo
           li.cm-link-item 
             a href="#contact"
               | Contacto
+    
+    /! SLIDER 
+    .cm-noslider-wrapper.service
+      .flex.col.start.cm-flex-service-noslider
+        h2
+          | Servicios
+          br
+          |Tasación de propiedades
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        a.button.highlight href="#contact" Haz tu consulta ahora
+    /! UF BAND
+    .cm-uf-band.flex.row.center Lunes 27 de Agosto de 2018, Valor UF: $29.238,94 CLP | $44.25 USD
 
-    /! SHOWCASE PROPIERTIES
-    section.cm-showcase.page
-      .flex.row.center
-        h2.flex.start.row.cm-section-title Nuestras propiedades
-      .flex.row.center.cm-showcase-flex
-        /! PROPIERTY 1
-        article.cm-highlight-property
-          span Copiapó, Región de Atacama
-          .flex.col.start.cm-block-h-property
-            h4 Venta propiedad usada
-            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
-            a.button.naked href="./propierty.html"
-              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-              | Seguir leyendo
-        /! PROPIERTY 2
-        article.cm-highlight-property
-          span Copiapó, Región de Atacama
-          .flex.col.start.cm-block-h-property
-            h4 Venta propiedad usada
-            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
-            a.button.naked href="./propierty.html"
-              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-              | Seguir leyendo
-        /! PROPIERTY 3
-        article.cm-highlight-property
-          span Copiapó, Región de Atacama
-          .flex.col.start.cm-block-h-property
-            h4 Venta propiedad usada
-            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
-            a.button.naked href="./propierty.html"
-              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-              | Seguir leyendo
-        /! PROPIERTY 4
-        article.cm-highlight-property
-          span Copiapó, Región de Atacama
-          .flex.col.start.cm-block-h-property
-            h4 Venta propiedad usada
-            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
-            a.button.naked href="./propierty.html"
-              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-              | Seguir leyendo
-        /! PROPIERTY 5
-        article.cm-highlight-property
-          span Copiapó, Región de Atacama
-          .flex.col.start.cm-block-h-property
-            h4 Venta propiedad usada
-            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
-            a.button.naked href="./propierty.html"
-              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-              | Seguir leyendo
-        /! PROPIERTY 6
-        article.cm-highlight-property
-          span Copiapó, Región de Atacama
-          .flex.col.start.cm-block-h-property
-            h4 Venta propiedad usada
-            p 4200UF - 80M2 Construidos  -  3 habitaciones, 2 baños, estacionamiento, antejardín, Cocina independiente.
-            a.button.naked href="./propierty.html"
-              img src="../assets/img/icon-agregar.svg" alt="agregar" title="agregar"
-              | Seguir leyendo
-      nav.cm-nav-pages.flex.row.end
-        a.button.naked href="#" Atrás
-        a.button.naked.active href="#" 1
-        a.button.naked href="#" 2
-        a.button.naked href="#" 3
-        a.button.naked href="#" Siguiente
+    /! SERVICE FEATURES
+    .flex.col.center.cm-service-features
+      h3 La tasación de propiedades te ayudará a:
+      .cm-serv-feat-wrapper
+        ul.flex.col.start
+          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.
+          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          li Lorem ipsum dolor sit amet, consectetuer, et dolore
+          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.
+      a.button.normal href="#contact" Contáctanos
+    
+    /! SERVICE EXPAND
+    .flex.row.center.cm-service-expand
+      .cm-service-exp-img
+      article.cm-service-article
+        h4 ¿En qué consiste?
+        h5 Nombre del servicio
+        p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
     
     /! CONTACT
     section.cm-contact
@@ -132,7 +98,7 @@ html lang="es"
           .flex.row.end.cm-flex-form
             label Nombre:*
             input type="text" name="name"
-          .flex.row.end.cm-flex-form 
+          .flex.row.end.cm-flex-form
             label Teléfono:*
             input type="text" name="phone"
           .flex.row.end.cm-flex-form

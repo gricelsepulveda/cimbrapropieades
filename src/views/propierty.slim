@@ -42,19 +42,19 @@ html lang="es"
               i.fab.fa-instagram
         ul.cm-link-nav.flex.row.end
           li.cm-link-item
-            a href="#"
+            a href="./index.html"
               | Inicio
           li.cm-link-item 
-            a href="#"
+            a href="./services.html"
               | Servicios
           li.cm-link-item 
-            a href="#" 
+            a href="./requiered.html"
               | Requisitos
           li.cm-link-item.active
             a href="./propierties.html"
               | Catálogo
           li.cm-link-item 
-            a href="#"
+            a href="#contact"
               | Contacto
     
     /! SLIDER 
@@ -72,37 +72,67 @@ html lang="es"
     .cm-uf-band.flex.row.center Lunes 27 de Agosto de 2018, Valor UF: $29.238,94 CLP | $44.25 USD
 
     /! PROPIERTY PAGE
-    section.cm-propierty-page.flex.col.start
+    section.cm-propierty-page.flex.col.center
       a.button.naked href="#"
         i.fas.fa-arrow-left
         | Volver
       h2.flex.start.row.cm-section-title Nombre de la propiedad
-      .flex.row.center
+      .flex.row.center.cm-flex-property
         .cm-container-propierty-images
           nav.cm-propierty-carrousel
             ul.flex.row.start
               li.active
               li
               li 
-        .flex.col.start
+        .flex.col.start.cm-property-info
           span.cm-price-uf 4.200UF
           span.cm-price $000.000.000
-          .flex.row.start
+          .flex.row.start.cm-buttons-property
             a.button.normal href="#" Consultar por propiedad
             .flex.row.start.cm-social
               p Compartir
               a.button.facebook href="#"
                 i.fab.fa-facebook-f
-              a.button.facebook href="#"
+              a.button.whatsapp href="#"
+                i.fab.fa-whatsapp
+              a.button.twitter href="#"
                 i.fab.fa-twitter
-              a.button.instagram href="#"
-                i.fab.fa-instagram
+              
           h5 Descripción
-          p 
+          p.cm-text-propierty 
             | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          h5 Resumen
           .flex.row.start.cm-propierty-badges
-            .cm-propierty-badge
-              img src="../assets/img/icon-balcon.svg"
+            // RESUME 1
+            .flex.row.start.cm-resume
+              .cm-propierty-badge
+                img src="../assets/img/icon-dormitorio.svg"
+              span 3 Dormitorios
+            // RESUME 2
+            .flex.row.start.cm-resume
+              .cm-propierty-badge
+                img src="../assets/img/icon-balcon.svg"
+              span Balcón
+            // RESUME 3
+            .flex.row.start.cm-resume
+              .cm-propierty-badge
+                img src="../assets/img/icon-bano.svg"
+              span 2 Baños
+            // RESUME 4
+            .flex.row.start.cm-resume
+              .cm-propierty-badge
+                img src="../assets/img/icon-estacionamiento.svg"
+              span Estacionamiento
+            // RESUME 5
+            .flex.row.start.cm-resume
+              .cm-propierty-badge
+                img src="../assets/img/icon-bodega.svg"
+              span Bodega
+            // RESUME 6
+            .flex.row.start.cm-resume
+              .cm-propierty-badge
+                img src="../assets/img/icon-area-verde.svg"
+              span Áreas verdes
 
       
     

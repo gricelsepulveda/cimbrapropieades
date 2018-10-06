@@ -54,11 +54,36 @@ a.button{
   text-decoration: none;
   text-align: center;
   border-radius: 4px;
+  @include animate;
   &.highlight {
     background-color: $color-1;
+    &:hover{
+      background-color: lighten($color-1, 10%);
+    }
   }
   &.normal{
     background-color: $color-2;
+    &:hover{
+      background-color: lighten($color-2, 10%);
+    }
+  }
+  &.facebook {
+    background-color: $fb;
+    &:hover{
+      background-color: lighten($fb, 10%);
+    }
+  }
+  &.twitter {
+    background-color: $tw;
+    &:hover{
+      background-color: lighten($tw, 10%);
+    }
+  }
+  &.whatsapp {
+    background-color: $ws;
+    &:hover{
+      background-color: lighten($ws, 10%);
+    }
   }
 }
 
@@ -567,6 +592,31 @@ a.button.naked {
       }
     }
   }
+  &.service {
+    height: 630px;
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+      image: url('../img/tasasiones.jpg');
+    } 
+    box-sizing: border-box;
+    padding: 40px;
+    padding-top: 210px;
+    h2 {
+      @include font($defaultFamily, 48px, 600);
+      color: $white;
+      margin-bottom: 20px;
+    }
+    p {
+      @include font($defaultFamily, 16px, 400);
+      color: $white;
+      padding: 10px;
+      background-color: rgba($white, 0.25);
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .cm-propierty-page{
@@ -583,6 +633,10 @@ a.button.naked {
     color: $black;
     @include font($defaultFamily, 48px, 600);
     margin-bottom: 40px;
+  }
+  .cm-flex-property{
+    margin: 0 auto;
+    align-items: flex-start!important;
   }
   .cm-container-propierty-images {
     width: 500px;
@@ -634,5 +688,195 @@ a.button.naked {
         }
       }
     }
+  }
+  .cm-property-info {
+    width: 400px;
+    margin-left: 20px;
+    .cm-price-uf {
+      color: $black;
+      @include font($defaultFamily, 48px, 600);
+    }
+    .cm-price {
+      color: $black;
+      @include font($defaultFamily, 18px, 500);
+      margin-bottom: 10px;
+    }
+    .cm-buttons-property {
+      position: relative;
+      p {
+        position: absolute;
+        text-transform: uppercase;
+        top: -25px;
+        right: 60px;
+        @include font($defaultFamily, 12px, 500);
+      }
+      a.button{
+        &.normal{
+          width: 200px;
+        }
+        &.whatsapp, &.facebook, &.twitter{
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          padding-bottom: 0;
+          width: 36px;
+          height: 36px;
+          margin-left: 10px;
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    h5 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      @include font($defaultFamily, 18px, 500);
+      color: $black;
+    }
+    .cm-text-propierty{
+      @include font($defaultFamily, 12px, 400);
+      color: $black;
+    }
+  }
+  .cm-propierty-badges{
+    width: 350px;
+    flex-wrap: wrap;
+    .cm-resume {
+      margin: 10px;
+      width: 150px;
+    }
+    .cm-propierty-badge{
+      width: 48px;
+      height: 48px;
+      background-color: $color-1;
+      border-radius: 100%;
+      @include flex-col-center;
+      img {
+        width: 40px;
+        height: auto;
+      }
+    }
+    span {
+      @include font($defaultFamily, 12px, 300);
+      color: $black;
+      margin-left: 10px;
+    }
+  }
+}
+
+// SERVICE 
+.cm-service-features{
+  box-sizing: border-box;
+  padding: 40px 40px 80px 40px;
+  background-color: darken($white, 5%);
+  h3 {
+    @include font($defaultFamily, 48px, 600);
+    color: $black;
+    margin-bottom: 40px;
+  }
+  .cm-serv-feat-wrapper {
+    margin-bottom: 40px;
+    ul {
+      @include clean-list;
+      width: 600px;
+      li {
+        @include clean-list;
+        padding-left: 40px;
+        position: relative;
+        margin-bottom: 20px!important;
+        @include flex-row-center;
+        &:last-of-type{
+          margin-bottom: 0px!important;
+        }
+        &:before {
+          width: 36px;
+          height: 36px;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          content: '';
+          background-image: url('../img/icon-check.svg');
+          background: {
+            size: 24px auto;
+            position: center;
+            repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
+//SERVICE EXPAND
+.cm-service-expand {
+  overflow: hidden;
+  background-color: $black;
+  position: relative;
+  &:before{
+    position: absolute;
+    left: calc(50vw - 124px);
+    top: 0px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-bottom: 800px solid $black;
+    border-left: 100px solid transparent;
+  }
+  .cm-service-exp-img {
+    width: 50%;
+    height: 500px;
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+      image: url('../img/tasaciones-2.jpg');
+    }
+  }
+  .cm-service-article{
+    position: relative;
+    width: 50%;
+    background-color: $black;
+    padding: 80px 20px 80px 20px;
+    h4 {
+      @include font($defaultFamily, 48px, 600);
+      color: $white;
+      margin-bottom: 40px;
+    }
+    h5 {
+      @include font($defaultFamily, 24px, 600);
+      color: $white;
+      margin-bottom: 20px;
+    }
+    p {
+      @include font($defaultFamily, 12px, 400);
+      color: $white;
+    }
+  }
+}
+
+//REQUIRED  
+.cm-required-features{
+  box-sizing: border-box;
+  padding: 40px 40px 80px 40px;
+  background-color: darken($white, 5%);
+  h3 {
+    @include font($defaultFamily, 48px, 600);
+    color: $black;
+    margin-bottom: 40px;
+  }
+  .cm-article-required {
+    column-count: 2;
+    column-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    p {
+      @include font($defaultFamily, 12px, 400);
+      color: $black;
+      text-align: justify;
+    }
+  }
+  a.button {
+    margin-top: 40px;
   }
 }
