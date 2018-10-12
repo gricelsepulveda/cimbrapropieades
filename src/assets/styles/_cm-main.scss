@@ -33,6 +33,9 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  * {
+    box-sizing: border-box!important;
+  }
 }
 
 .cm-section-title {
@@ -134,10 +137,11 @@ nav.cm-main-nav{
       @include clean-list;
       @media #{$sm}{
         flex-wrap: wrap;
-        width: 66px;
+        width: 80px;
         position: fixed;
         right: 20px;
         top: 18px;
+        position: relative;
       }
       li.cm-social-item{
         height: 32px;
@@ -146,6 +150,7 @@ nav.cm-main-nav{
         box-sizing: border-box;
         @media #{$sm}{
           margin-right: 0px;
+          position: absolute;
         }
         &:last-of-type{
           margin-right: 0;
@@ -163,6 +168,15 @@ nav.cm-main-nav{
         &:nth-of-type(1){
           @media #{$sm}{
             border-right: 1px solid rgba($white, 0.125);
+            top: 20px;
+            left: calc(100vw - 80px)!important;
+            position: fixed;
+          }
+        }
+        &:nth-of-type(2){
+          @media #{$sm}{
+            top: -48px;
+            right: -32px;
           }
         }
         &:nth-of-type(3){
@@ -174,6 +188,7 @@ nav.cm-main-nav{
         &:nth-of-type(4){
           @media #{$sm}{
             border-top: 1px solid rgba($white, 0.125);
+            right: -32px;
           }
         }
         a {
