@@ -363,6 +363,10 @@ nav.cm-main-nav{
   box-sizing: border-box;
   color: $white;
   @include font($defaultFamily, 14px, 400);
+  @media #{$sm}{
+    font-size: 12px;
+    text-align: center;
+  }
 }
 
 //SERVICE HOME 
@@ -774,14 +778,23 @@ a.button.naked {
         @include font($defaultFamily, 48px, 300);
         margin-bottom: 20px;
         text-align: left;
+        @media #{$sm}{
+          font-size: 32px;
+        }
       }
       p {
         color: $white;
         @include font($defaultFamily, 16px, 400);
+        @media #{$sm}{
+          font-size: 12px;
+        }
         span {
           display: block;
           margin-bottom: 10px;
           @include font($defaultFamily, 16px, 500);
+          @media #{$sm}{
+            font-size: 12px;
+          }
         }
       }
     }
@@ -797,10 +810,17 @@ a.button.naked {
     box-sizing: border-box;
     padding: 40px;
     padding-top: 210px;
+    @media #{$sm}{
+      height: 480px;
+      padding: 140px 20px 40px 20px;
+    }
     h2 {
       @include font($defaultFamily, 48px, 600);
       color: $white;
       margin-bottom: 20px;
+      @media #{$sm}{
+        font-size: 32px;
+      }
     }
     p {
       @include font($defaultFamily, 16px, 400);
@@ -809,6 +829,9 @@ a.button.naked {
       background-color: rgba($white, 0.25);
       max-width: 600px;
       margin-bottom: 20px;
+      @media #{$sm}{
+        font-size: 12px;
+      }
     }
   }
 }
@@ -964,22 +987,34 @@ a.button.naked {
   box-sizing: border-box;
   padding: 40px 40px 80px 40px;
   background-color: darken($white, 5%);
+  @media #{$sm}{
+    padding: 20px 20px 40px 20px;
+  }
   h3 {
     @include font($defaultFamily, 48px, 600);
     color: $black;
     margin-bottom: 40px;
+    @media #{$sm}{
+      font-size: 32px;
+    }
   }
   .cm-serv-feat-wrapper {
     margin-bottom: 40px;
     ul {
       @include clean-list;
       width: 600px;
+      @media #{$sm}{
+        width: initial;
+      }
       li {
         @include clean-list;
         padding-left: 40px;
         position: relative;
         margin-bottom: 20px!important;
         @include flex-row-center;
+        @media #{$sm}{
+          font-size: 12px;
+        }
         &:last-of-type{
           margin-bottom: 0px!important;
         }
@@ -1007,6 +1042,9 @@ a.button.naked {
   overflow: hidden;
   background-color: $black;
   position: relative;
+  @media #{$sm}{
+    flex-direction: column!important;
+  }
   &:before{
     position: absolute;
     left: calc(50vw - 124px);
@@ -1016,10 +1054,16 @@ a.button.naked {
     content: '';
     border-bottom: 800px solid $black;
     border-left: 100px solid transparent;
+    @media #{$sm}{
+      display: none;
+    }
   }
   .cm-service-exp-img {
     width: 50%;
     height: 500px;
+    @media #{$sm}{
+      width: 100%;
+    }
     background: {
       size: cover;
       position: center;
@@ -1032,6 +1076,11 @@ a.button.naked {
     width: 50%;
     background-color: $black;
     padding: 80px 20px 80px 20px;
+    @media #{$sm}{
+      width: 100%;
+      padding: 40px 20px 40px 20px;
+      box-sizing: border-box;
+    }
     h4 {
       @include font($defaultFamily, 48px, 600);
       color: $white;
