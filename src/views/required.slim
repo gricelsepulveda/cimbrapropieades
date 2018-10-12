@@ -16,6 +16,7 @@ html lang="es"
     script src="js/jquery-3.3.1.min.js" type="text/javascript"
     /! SCRIPTS
     script src="js/cm-scripts.min.js"
+    script src="js/smooth-scroll.min.js"
     /! LIVERELOAD
     script src="http://localhost:35729/livereload.js"
     /! FONTAWESOME
@@ -77,7 +78,7 @@ html lang="es"
       a.button.normal href="#contact" Solicitar evaluación
     
     /! CONTACT
-    section.cm-contact
+    section.cm-contact#contact
       .flex.row.between.cm-flex-contact
         h2.flex.row.start Escríbenos y conversemos acerca de tu espacio.
         form.flex.col.end.cm-contact-form
@@ -122,6 +123,8 @@ html lang="es"
               i.fas.fa-envelope
               | contacto@cimbrapropieades.cl
       img src="../assets/img/logo-cimbra.svg" alt="cimbra logo"
+  javascript:
+    var scroll = new SmoothScroll('a[href*="#"]');
 
 
 

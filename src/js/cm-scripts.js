@@ -39,22 +39,19 @@ $(document).ready(function(){
 
   //MENU TOGGLE
   $('nav.cm-main-nav > img').click(function(){
-
-    console.log($('.cm-link-nav').height());
-
-    if ($('.cm-link-nav').height() == '0' ){
-
-      console.log('si es cero');
-
-      $('.cm-link-nav').height('auto');
+    if ( window.outerWidth < 767 ) {
+      if ($('.cm-link-nav').height() == '0' ){
+        $('.cm-link-nav').height('auto');
+      }
+      else {
+        $('.cm-link-nav').height(0);
+      }
     }
-
-    else {
-      console.log('no es cero');
-
+  });
+  $('li.cm-link-item').click(function(){
+    if ( window.outerWidth < 767 ) {
+      console.log ('si')
       $('.cm-link-nav').height(0);
     }
   });
-
-
 });
