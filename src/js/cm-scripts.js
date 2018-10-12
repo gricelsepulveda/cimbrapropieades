@@ -29,7 +29,7 @@ $(document).ready(function(){
     $('.cm-slider-button').removeClass('active');
     $(this).addClass('active');
     var numberChange = $(this).index();
-    var sliderChange = $('.cm-item-slider')[numberChange]
+    var sliderChange = $('.cm-item-slider')[numberChange];
     $('.cm-item-slider').removeClass('active');
     $(sliderChange).addClass('active');
     bannerStart = setInterval(function(){ 
@@ -49,9 +49,13 @@ $(document).ready(function(){
     }
   });
   $('li.cm-link-item').click(function(){
-    if ( window.outerWidth < 767 ) {
-      console.log ('si')
-      $('.cm-link-nav').height(0);
+    if ($(this).hasClass('active')) {
+      $('.cm-link-item').removeClass('active');
+      $(this).addClass('active');
+      if ( window.outerWidth < 767 ) {
+        console.log ('si');
+        $('.cm-link-nav').height(0);
+      }
     }
   });
 });
