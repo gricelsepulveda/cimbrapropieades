@@ -226,24 +226,24 @@ html lang="es"
     section#contact.cm-contact
       .flex.row.between.cm-flex-contact
         h2.flex.row.start Escríbenos y conversemos acerca de tu espacio.
-        form.flex.col.end.cm-contact-form
+        form.flex.col.end.cm-contact-form action="mailer.php" method="post" 
           h4 Formulario de Contacto
           .flex.row.end.cm-flex-form
             label Nombre:*
-            input type="text" name="name"
+            input type="text" name="name" id="name"
           .flex.row.end.cm-flex-form
             label Teléfono:*
-            input type="text" name="phone"
+            input type="text" name="phone" id="phone"
           .flex.row.end.cm-flex-form
             label Correo:*
-            input type="email" name="mail"
+            input type="email" name="email" id="email"
           .flex.row.end.cm-flex-form
             label Asunto:
-            input type="text" name="subject"
+            input type="text" name="subject" id="subject"
           .flex.row.end.cm-flex-form
             label Mensaje:
-            textarea name="message" rows="7"
-          a.button.normal href="#" Enviar
+            textarea name="message" id="message" rows="7"
+          button.normal type="submit" Enviar
           span.cm-note Te contactaremos de vuelta en un plazo max. de 24hrs (hábiles)
     
     /! FOOTER
