@@ -839,6 +839,9 @@ a.button.naked {
 .cm-propierty-page{
   padding: 40px;
   box-sizing: border-box;
+  @media #{$sm}{
+    padding: 20px;
+  }
   > a.button.naked {
     text-transform: initial;
     align-self: start;
@@ -850,14 +853,26 @@ a.button.naked {
     color: $black;
     @include font($defaultFamily, 48px, 600);
     margin-bottom: 40px;
+    @media #{$sm}{
+      font-size: 32px;
+    }
   }
   .cm-flex-property{
     margin: 0 auto;
     align-items: flex-start!important;
+    @media #{$sm}{
+      flex-direction: column!important;
+      align-items: center!important;
+      margin: initial;
+    }
   }
   .cm-container-propierty-images {
     width: 500px;
     height: 500px;
+    @media #{$sm}{
+      width: 250px;
+      height: 250px;
+    }
     position: relative;
     background: {
       image: url('../img/propierty.jpg');
@@ -909,6 +924,11 @@ a.button.naked {
   .cm-property-info {
     width: 400px;
     margin-left: 20px;
+    @media #{$sm}{
+      width: auto;
+      margin-left: 0px;
+      align-items: center!important;
+    }
     .cm-price-uf {
       color: $black;
       @include font($defaultFamily, 48px, 600);
@@ -920,12 +940,24 @@ a.button.naked {
     }
     .cm-buttons-property {
       position: relative;
+      @media #{$sm}{
+        flex-direction: column;
+      }
+      .cm-social {
+        @media #{$sm}{
+          margin-top: 30px;
+        }
+      }
       p {
         position: absolute;
         text-transform: uppercase;
         top: -25px;
         right: 60px;
         @include font($defaultFamily, 12px, 500);
+        @media #{$sm}{
+          top: 44px;
+          right: 80px;
+        }
       }
       a.button{
         &.normal{
@@ -959,6 +991,9 @@ a.button.naked {
   .cm-propierty-badges{
     width: 350px;
     flex-wrap: wrap;
+    @media #{$sm}{
+      width: auto;
+    }
     .cm-resume {
       margin: 10px;
       width: 150px;
