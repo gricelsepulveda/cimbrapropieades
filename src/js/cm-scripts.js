@@ -36,4 +36,25 @@ $(document).ready(function(){
       moveBanner();
     }, 3500);
   });
+
+  //MENU TOGGLE
+  $('nav.cm-main-nav > img').click(function(){
+
+    console.log($('.cm-link-nav').height());
+
+    if ($('.cm-link-nav').height() == '0' ){
+
+      console.log('si es cero');
+
+      $('.cm-link-nav').height('auto');
+    }
+
+    else {
+      console.log('no es cero');
+
+      $('.cm-link-nav').height(0);
+    }
+  });
+
+
 });

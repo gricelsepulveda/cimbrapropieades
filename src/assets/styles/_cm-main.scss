@@ -100,19 +100,75 @@ nav.cm-main-nav{
   z-index: 2;
   @include flex-row-center;
   justify-content: space-between;
+  @media #{$sm}{
+    justify-content: start;
+    width: 100vw;
+    padding: 0px 20px 0px 0px;
+    &:after {
+      font-family: 'Font Awesome\ 5 Free'!important;
+      width: 42px;
+      height: 42px;
+      background-color: $black;
+      color: $white;
+      font-size: 24px;
+      font-weight: 600;
+      position: fixed;
+      left: 0px;
+      top: 28px;
+      @include flex-row-center;
+      content: '\f0c9';
+      cursor: pointer;
+    }
+  }
   img {
     height: 56px;
     width: auto;
+    @media #{$sm}{
+      height: 36px;
+      padding-left: 42px;
+      z-index: 1;
+    }
   }
   .cm-nav-wrapper{
     ul.cm-social-nav {
       @include clean-list;
+      @media #{$sm}{
+        flex-wrap: wrap;
+        width: 66px;
+        position: fixed;
+        right: 20px;
+        top: 18px;
+      }
       li.cm-social-item{
         height: 32px;
         color: $white;
         margin-right: 10px;
+        box-sizing: border-box;
+        @media #{$sm}{
+          margin-right: 0px;
+        }
         &:last-of-type{
           margin-right: 0;
+        }
+        &:first-of-type{
+          @media #{$sm}{
+            a {
+              font-size: 0px;
+              i {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        &:nth-of-type(1){
+          border-right: 1px solid rgba($white, 0.125);
+        }
+        &:nth-of-type(3){
+          border-top: 1px solid rgba($white, 0.125);
+          border-right: 1px solid rgba($white, 0.125);
+        }
+        &:nth-of-type(4){
+          border-top: 1px solid rgba($white, 0.125);
         }
         a {
           color: $white;
@@ -124,6 +180,9 @@ nav.cm-main-nav{
             @include flex-col-center;
             height: 32px;
             width: 32px;
+            @media #{$sm}{
+              margin-right: 0px;
+            }
           }
         }
       }
@@ -132,9 +191,25 @@ nav.cm-main-nav{
       @include clean-list;
       margin-bottom: -21px;
       margin-top: 10px;
+      @media #{$sm}{
+        background-color: $white;
+        position: fixed;
+        top: 90px;
+        left: 0px;
+        flex-direction: column;
+        width: 100vw;
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 0px;
+      }
       li.cm-link-item {
         margin-right: 10px;
         border-bottom: 4px solid transparent;
+        @media #{$sm}{
+          margin-right: 0px;
+          width: 100%;
+          border-bottom: 1px solid rgba($black, 0.125);
+        }
         &:last-of-type{
           margin-right: 0px;
         }
@@ -145,9 +220,19 @@ nav.cm-main-nav{
           @include flex-row-center;
           box-sizing: border-box;
           @include font($defaultFamily, 14px, 400);
+          @media #{$sm}{
+            color: $black;
+            height: 48px;
+          }
         }
         &.active {
           border-bottom: 4px solid $color-1;
+          @media #{$sm}{
+            background-color: $color-1;
+            a {
+              color: $white;
+            }
+          }
         }
       }
     }
@@ -204,6 +289,11 @@ nav.cm-main-nav{
           color: $white;
           @include font($defaultFamily, 60px, 600);
           margin-bottom: 40px;
+          @media #{$sm}{
+            font-size: 32px;
+            padding-top: 33px;
+            margin-bottom: 0px;
+          }
         }
         article.cm-banner-art{
           height: 60px;
@@ -213,6 +303,9 @@ nav.cm-main-nav{
           background-color: rgba($white, 0.25);
           margin-right: 40px;
           border-radius: 30px 0px 0px 30px;
+          @media #{$sm}{
+            display: none;
+          }
           &:last-of-type{
             margin-right: 0px;
           }
@@ -278,16 +371,34 @@ section.cm-services{
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 80px;
+  @media #{$sm}{
+    padding-bottom: 20px;
+  }
   .cm-section-title {
     margin-bottom: 80px;
+    @media #{$sm}{
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
   }
   .cm-service-flex {
     align-items: flex-start!important;
+    @media #{$sm}{
+      flex-direction: column;
+      align-items: center!important;
+    }
   }
   .cm-serv-article{
     margin-right: 40px;
+    @media #{$sm}{
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
     &:last-of-type{
       margin-right: 0px;
+      @media #{$sm}{
+        margin-bottom: 0px;
+      }
     }
     .cm-img-container {
       height: 200px;
@@ -327,10 +438,28 @@ section.cm-services{
   padding-left: 40px;
   padding-top: 80px;
   padding-bottom: 80px;
+  @media #{$sm}{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .cm-section-title{
+    @media #{$sm}{
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  }
   a.button{
     margin-right: 10px;
+    @media #{$sm}{
+      font-size: 12px;
+    }
     &:last-of-type{
       margin-right: 0;
+    }
+  }
+  .cm-buttons-showcase {
+    @media #{$sm}{
+      flex-direction: column;
     }
   }
   .cm-showcase-flex {
@@ -339,6 +468,9 @@ section.cm-services{
     margin-top: 80px;
     flex-wrap: wrap;
     max-width: 1120px;
+    @media #{$sm}{
+      margin-top: 20px;
+    }
     //HIGHLIGHTED PROPIERTY 
     .cm-highlight-property {
       width: 350px;
@@ -439,14 +571,28 @@ a.button.naked {
     repeat: no-repeat;
   }
   min-height: 630px;
+  @media #{$sm}{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .cm-flex-contact {
     align-items: flex-start!important;
+    @media #{$sm}{
+      flex-direction: column;
+      align-items: center!important;
+    }
   }
   h2 {
     color: $white;
     @include font($defaultFamily, 48px, 600);
     max-width: 50%;
     margin-top: 40px;
+    @media #{$sm}{
+      font-size: 32px;
+      max-width: initial;
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
   form.cm-contact-form {
     background-color: rgba($white, 0.35);
@@ -455,6 +601,13 @@ a.button.naked {
     width: 350px;
     height: 630px;
     position: relative;
+    @media #{$sm}{
+      padding: 10px 10px 50px 10px;
+      width: auto;
+      margin: 20px 10px 40px 10px;
+      height: auto;
+
+    }
     h4 {
       color: $white;
       @include font($defaultFamily, 16px, 600);
@@ -463,6 +616,11 @@ a.button.naked {
       text-transform: uppercase;
       width: 100%;
       text-align: left;
+      @media #{$sm}{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
     }
     .cm-flex-form {
       width: 100%;
@@ -470,11 +628,20 @@ a.button.naked {
       &:last-of-type{
         margin-bottom: 0px;
       }
+      @media #{$sm}{
+        flex-direction: column;
+      }
       label {
         color: $white;
         @include font($defaultFamily, 12px, 400);
         text-align: right;
         margin-right: 20px;
+        @media #{$sm}{
+          margin-right: 0px;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 5px;
+        }
       }
       input, textarea {
         width: 230px;
@@ -487,6 +654,9 @@ a.button.naked {
         &:focus {
           background-color: $white;
           color: $black;
+        }
+        @media #{$sm}{
+          width: 100%;
         }
       }
       input {
@@ -521,23 +691,47 @@ a.button.naked {
   background-color: $black;
   padding: 40px;
   box-sizing: border-box;
+  @media #{$sm}{
+    padding: 20px;
+    flex-direction: column-reverse!important;
+    justify-content: center!important;
+  }
+  .flex.col.start{
+    @media #{$sm}{
+      align-items: center;
+    }
+  }
   img {
     width: 250px;
+    @media #{$sm}{
+      margin-top: 20px;
+      margin-bottom: 40px;
+      width: 200px;
+    }
   }
   p, a {
     color: $white;
     @include font($defaultFamily, 14px, 400);
+    @media #{$sm}{
+      font-size: 12px;
+    }
   }
   i {
     color: $white;
     &.fa-envelope, &.fa-phone {
       margin-right: 5px;
     }
+    @media #{$sm}{
+      font-size: 18px;
+    }
   }
   a {
     @include clean-href;
     color: $white!important;
     margin-right: 20px!important;
+    @media #{$sm}{
+      font-size: 0px;
+    }
     &:last-of-type {
       margin-right: 0px;
     }
