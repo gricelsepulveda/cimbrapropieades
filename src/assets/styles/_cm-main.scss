@@ -823,13 +823,24 @@ a.button.naked {
       }
     }
   }
+  &.tasacion {
+    background-image: url('../img/tasacion-banner.jpg');
+  }
+  &.ventaarriendo{
+    background-image: url('../img/ventaarriendo-banner.jpg');
+  }
+  &.corretaje {
+    background-image: url('../img/corretaje-banner.jpg');
+  }
+  &.requisitos {
+    background-image: url('../img/requisitos-banner.jpg');
+  }
   &.service {
     height: 630px;
     background: {
       size: cover;
       position: center;
       repeat: no-repeat;
-      image: url('../img/tasasiones.jpg');
     } 
     box-sizing: border-box;
     padding: 40px;
@@ -1106,7 +1117,7 @@ a.button.naked {
   }
   &:before{
     position: absolute;
-    left: calc(50vw - 124px);
+    left: calc(50vw - 100px);
     top: 0px;
     width: 0;
     height: 0;
@@ -1128,6 +1139,12 @@ a.button.naked {
       position: center;
       repeat: no-repeat;
       image: url('../img/tasaciones-2.jpg');
+    }
+    &.ventaarriendo {
+      background-image: url('../img/ventaarriendo-banner.jpg');
+    }
+    &.corretaje {
+      background-image: url('../img/corretaje-banner.jpg');
     }
   }
   .cm-service-article{
